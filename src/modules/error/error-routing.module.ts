@@ -24,7 +24,7 @@ export const ROUTES: Routes = [
         canActivate: [],
         component: errorContainers.Error401Component,
         data: {
-            title: 'Error 401 - SB Clean Blog Angular',
+            title: 'Error 401 - BookTracker',
         } as SBRouteData,
     },
     {
@@ -32,7 +32,7 @@ export const ROUTES: Routes = [
         canActivate: [],
         component: errorContainers.Error404Component,
         data: {
-            title: 'Error 404 - SB Clean Blog Angular',
+            title: 'Error 404 - BookTracker',
         } as SBRouteData,
     },
     {
@@ -40,7 +40,7 @@ export const ROUTES: Routes = [
         canActivate: [],
         component: errorContainers.Error500Component,
         data: {
-            title: 'Error 500 - SB Clean Blog Angular',
+            title: 'Error 500 - BookTracker',
         } as SBRouteData,
     },
     {
