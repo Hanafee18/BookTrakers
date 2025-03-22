@@ -1,5 +1,5 @@
-<sb-layout-blog
-    ><sb-clean-blog-header backgroundImage='url("assets/img/bookflep.gif")' heading ="BookTracker's" subHeading="จัดการหนังสือของคุณได้ง่าย ๆ ติดตามความก้าวหน้า และแลกเปลี่ยนความรู้ผ่านบทความ" [siteHeading]="true"></sb-clean-blog-header><sb-demo-info *ngIf="!isLoggedIn"></sb-demo-info
+<sb-layout-blog>
+    <sb-clean-blog-header backgroundImage='url("assets/img/bookflep.gif")' heading ="BookTracker's" subHeading="จัดการหนังสือของคุณได้ง่าย ๆ ติดตามความก้าวหน้า และแลกเปลี่ยนความรู้ผ่านบทความ" [siteHeading]="true"></sb-clean-blog-header><sb-demo-info *ngIf="!isLoggedIn"></sb-demo-info
     ><ng-container *ngIf="posts$ | async as posts"
         ><div class="container">
             <div class="row">
@@ -7,12 +7,36 @@
                     <div class="post-preview" *ngFor="let post of posts">
                         <a [routerLink]="post.slug"
                             ><h2 class="post-title">{{post.heading}}</h2>
-                            <h3 class="post-subtitle">{{post.subHeading}}</h3></a
-                        >
+                            <h3 class="post-subtitle">{{post.subHeading}}</h3></a>
                         <p class="post-meta">{{post.meta}}</p>
                     </div>
                 </div>
             </div>
-        </div></ng-container
-    ></sb-layout-blog
->
+        </div></ng-container></sb-layout-blog>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://x.com/nafi3341" target="_blank"
+                                    ><fa-stack size="lg"><fa-icon class="fa-stack-2x" [icon]='["fas", "circle"]' stackItemSize="2x"></fa-icon><fa-icon class="fa-stack-1x fa-inverse" [icon]='["fab", "twitter"]' stackItemSize="1x"></fa-icon></fa-stack
+                                ></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://web.facebook.com/Hanafeeyusoh.hanafee?locale=th_TH" target="_blank"
+                                    ><fa-stack size="lg"><fa-icon class="fa-stack-2x" [icon]='["fas", "circle"]' stackItemSize="2x"></fa-icon><fa-icon class="fa-stack-1x fa-inverse" [icon]='["fab", "facebook-f"]' stackItemSize="1x"></fa-icon></fa-stack
+                                ></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/Hanafee18" target="_blank"
+                                    ><fa-stack size="lg"><fa-icon class="fa-stack-2x" [icon]='["fas", "circle"]' stackItemSize="2x"></fa-icon><fa-icon class="fa-stack-1x fa-inverse" [icon]='["fab", "github"]' stackItemSize="1x"></fa-icon></fa-stack
+                                ></a>
+                            </li>
+                        </ul>
+                        <p class="copyright text-muted">เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา การโปรแกรมบนเว็บ</p>
+                        <p class="copyright text-muted">นาย ฮานาฟี ยูโซ๊ะ 166404140049</p>
+                    </div>
+                </div>
+            </div>
+        </footer>

@@ -1,1 +1,38 @@
-@import 'styles/variables.scss';
+.description {
+    font-size: 1.1rem; /* ปรับขนาดตัวอักษร */
+    line-height: 1.8; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    text-align: justify; /* จัดข้อความให้เรียงสวยแบบหนังสือ */
+    margin: 20px auto; /* เพิ่มระยะห่างรอบตัว */
+    max-width: 800px; /* กำหนดความกว้างสูงสุดของพารากราฟ */
+    color: #333; /* ปรับสีให้สบายตา */
+  }
+  .aboutheading {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      color: #ff9b9b;
+      transform: translateY(-5px);
+    }
+  }
+  .sb-clean-blog-header {
+    margin-bottom: 20px; /* ให้มีช่องว่างระหว่างหัวข้อ "About Web" กับข้อความด้านล่าง */
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 20px; /* ระยะห่างจากหัวข้อ "About Web" */
+    color: #5a4a42;
+    text-align: justify; /* จัดข้อความให้เรียงจากซ้ายถึงขวา */
+    padding: 0 10px;
+  }
+  
+  
