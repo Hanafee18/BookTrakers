@@ -33,4 +33,3 @@ import * as authServices from './services';
     declarations: [...authContainers.containers, ...authComponents.components],
     exports: [...authContainers.containers, ...authComponents.components],
 })
-export class AuthModule {}

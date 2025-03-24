@@ -3,21 +3,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SBRouteData } from '@modules/navigation/models';
 
-/* Module */
-import { AuthModule } from './auth.module';
-
-/* Containers */
-import * as authContainers from './containers';
-
-/* Guards */
-import * as authGuards from './guards';
-
 /* Routes */
 export const ROUTES: Routes = [
     {
         path: 'login',
         canActivate: [],
-        component: authContainers.LoginComponent,
+        component: null, // Removed reference to authContainers.LoginComponent
         data: {
             title: 'Pages Login - BookTracker',
         } as SBRouteData,
@@ -25,7 +16,7 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-    imports: [AuthModule, RouterModule.forChild(ROUTES)],
+    imports: [RouterModule.forChild(ROUTES)], // Removed AuthModule
     exports: [RouterModule],
 })
 export class AuthRoutingModule {}

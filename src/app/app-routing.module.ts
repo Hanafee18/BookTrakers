@@ -15,11 +15,6 @@ const routes: Routes = [
             import('modules/blog/blog-routing.module').then(m => m.BlogRoutingModule),
     },
     {
-        path: 'auth',
-        loadChildren: () =>
-            import('modules/auth/auth-routing.module').then(m => m.AuthRoutingModule),
-    },
-    {
         path: 'error',
         loadChildren: () =>
             import('modules/error/error-routing.module').then(m => m.ErrorRoutingModule),
